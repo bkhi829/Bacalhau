@@ -48,3 +48,10 @@ div.tabContent{
   justify-items: center;
   align-items: center;
 }
+
+/* iPhone (most mobile) css */
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: portrait) {
+  li.tabButton {
+    width: 50%;
+  }
+}

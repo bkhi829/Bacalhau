@@ -3,7 +3,14 @@ import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
 
 gsap.registerPlugin(ScrollToPlugin);
 
-export const tabContainerAnimation = (ref) => gsap.fromTo(ref.current,{opacity:0},{opacity:1,duration:.8,delay:.2});
+const infoOutAnimation = ()=> {
+    gsap.to('.InfoContainer',{opacity:0,display:'none',duration:0});
+}
+
+export const tabContainerAnimation = (ref) => {
+  infoOutAnimation();
+  gsap.fromTo(ref.current,{opacity:0},{opacity:1,duration:1})
+}
 
 export const infoAnimation = (ref) => {
   const timeline = gsap.timeline();

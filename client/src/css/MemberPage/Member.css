@@ -11,3 +11,9 @@ main.memberMain {
   min-height: 90vh;
 }
 
+/* iPhone (most mobile) css */
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: portrait) {
+  main.memberMain {
+    width: 100%;
+  }
+}

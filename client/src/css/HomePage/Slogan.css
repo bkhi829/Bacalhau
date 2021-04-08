@@ -30,3 +30,16 @@
 .sloganContainer .slogan h1:nth-child(3){
   margin-left: 4rem;
 }
+
+/* iPhone (most mobile) css */
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: portrait) {
+  .sloganContainer {
+    background-size: cover;
+    background-position: center;
+    background-attachment: unset;
+  }
+
+  .slogan {
+    display:none;
+  }
+}

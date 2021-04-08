@@ -1,0 +1,37 @@
+.descriptionContainer {
+  height: 90vh;
+  background: linear-gradient(0.25turn, #bff5ee,#fff,#fff, #bff5ee);
+}
+
+.descriptionContainer main {
+  background-image: url('../../img/bacalhau.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+}
+
+.descriptionContainer .overlay {
+  background-color: #ffffffaa;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.descriptionContainer main blockquote{
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 4px 12px;
+}
+
+.descriptionContainer main p {
+  line-height: 2rem;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 6px 18px;
+  font-weight: 500;
+}
+

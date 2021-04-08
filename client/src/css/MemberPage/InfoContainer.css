@@ -1,0 +1,61 @@
+div.InfoContainer {
+  box-sizing: border-box;
+  padding-top: 50px;
+  width: 100%;
+  min-height: 70vh;
+  display: none;
+}
+
+div.InfoContainer .ImgContainer{
+  float: left;
+  width: 45%;
+  height: 100%;
+}
+
+div.InfoContainer .ImgContainer img{
+  width: 90%;
+  height: 90%;
+}
+
+div.InfoContainer .ImgContainer div.SocialContainer{
+  box-sizing: border-box;
+  width: 90%;
+  margin-top: 5px;
+  text-align: center;
+}
+
+div.InfoContainer .ImgContainer div.SocialContainer .socialIcon{
+  margin: 0 1rem;
+}
+
+div.InfoContainer .TxtContainer .NameBox{
+  margin-block-end: 0;
+  margin-bottom: 5px;
+}
+
+div.InfoContainer .TxtContainer .NicknameBox{
+  color: #888888;
+  font-size: 1rem;
+}
+
+div.InfoContainer .TxtContainer p.DescriptionBox {
+  font-size: 1.2rem;
+}
+
+div.InfoContainer .TxtContainer .SayingBox h4{
+  margin-block: 0 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+div.InfoContainer .TxtContainer .SayingBox ol {
+  margin-block: 0 0;
+  margin-top: 5px;
+  padding-inline-start: 0;
+  list-style-position: inside;
+  line-height: 2rem;
+}
+
+div.InfoContainer .TxtContainer .SayingBox ol q {
+  font-size: 1rem;
+}

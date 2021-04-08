@@ -1,0 +1,13 @@
+div.MemberPage {
+  width: 100%;
+  min-height: 90vh;
+  padding-top: 10vh;
+}
+
+main.memberMain {
+  width: 70%;
+  margin: auto;
+  background-color: #ffffff;
+  min-height: 90vh;
+}
+

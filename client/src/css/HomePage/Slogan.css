@@ -1,0 +1,32 @@
+.sloganContainer {
+  height: 90vh;
+  background-image: url('../../img/cover.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right 10vh;
+  position: relative;
+}
+
+.sloganContainer .slogan {
+  position:absolute;
+  right: 5vw;
+  bottom: 5vh;
+}
+
+
+.sloganContainer .slogan h1 {
+  color: #7BDCFF;
+  font-size: 7rem;
+  margin: 0;
+  opacity: 0;
+}
+
+.sloganContainer .slogan h1:nth-child(2){
+  color: #29E89E;
+  margin-left: 2rem;
+}
+
+.sloganContainer .slogan h1:nth-child(3){
+  margin-left: 4rem;
+}

@@ -1,0 +1,46 @@
+.likeCountContainer {
+  height: 90vh;
+  background-image: url('../../img/share.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.likeCountContainer .likeCountWrap a {
+  text-decoration: none;
+  color: unset;
+}
+
+.likeCountContainer .likeCountWrap {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.likeCountSection{
+  margin: 0 2rem;
+  padding: 1rem 1.5rem;
+  background: #ebebebcc;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.likeCountSection .socialIcon {
+  margin-right: 1rem;
+}
+
+.likeCountSection .likeCount {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.likeCountSection .likeUnit{
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: right;
+}

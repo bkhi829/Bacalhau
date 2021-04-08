@@ -1,0 +1,54 @@
+header {
+  width: 100%;
+  min-height: 10vh;
+  box-shadow: 0 2px 2px 0px #a9a8a8;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position:fixed;
+  z-index: 999;
+  background-color: #fff;
+}
+
+header a {
+  text-decoration: none;
+  color: unset;
+}
+
+h2.title {
+  color: #00AC94;
+  font-size: 28px;
+}
+
+header ul {
+  align-self: flex-end;
+  margin: 0;
+}
+
+header ul li{
+  display: inline-block;
+  position: relative;
+  margin: 0 20px 10px 20px;
+  font-size: 18px;
+}
+
+header ul li:hover{
+  color: #00AC94;
+  cursor: pointer;
+}
+
+header hr {
+  margin: 0;
+  background-color: transparent;
+  height: 2px;
+  border: none;
+  width: 50%;
+}
+
+header ul a:hover~hr{
+  background-color: #00AC94;
+}
+
+header ul a:hover:nth-child(2)~hr {
+  margin-left: 50%;
+}

@@ -1,4 +1,6 @@
 import axios from 'axios';
+import Menu from './Menu';
+
 import '../../css/Videos/Videos.css';
 
 const Videos = ()=>{
@@ -12,8 +14,10 @@ const Videos = ()=>{
   // .then(data=>console.log(data));
 
   return (
-    <div className="VideosContainer">
-      This is Video Page
+    <div className="VideosPage">
+      <main className="VideosMain">
+        <Menu />
+      </main>
     </div>
   )
 }

@@ -1,0 +1,60 @@
+div.menuContainer {
+  width: 70%;
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  padding-top: 50px;
+}
+
+.menuContainer button{
+  border: none;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.menuContainer button.btnLeft{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menuContainer button:focus{
+  outline:none;
+}
+
+ul.videosMenu {
+  width: 90%;
+  margin: auto;
+  list-style-type: none;
+  overflow-x:scroll;
+  white-space: nowrap;
+  margin-block: 0 0;
+  padding-inline-start: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+ul.videosMenu::-webkit-scrollbar {
+  display:none;
+}
+
+ul.videosMenu li.listItem {
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 33.3%;
+  color: grey;
+}
+
+ul.videosMenu li.listItem.active {
+  font-weight: bold;
+  color: #000;
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: portrait) {
+  div.menuContainer {
+    width: 100%;
+  }
+}

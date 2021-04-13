@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { tabContainerAnimation } from './animation';
 import Tab from './Tab';
 
-import '../../css/MemberPage/TabContainer.css';
+import '../../css/Members/TabContainer.css';
 import { useEffect } from 'react/cjs/react.development';
 
 const TabContainer = (props) =>{

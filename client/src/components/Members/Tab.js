@@ -1,6 +1,6 @@
 import { infoAnimation } from './animation';
 
-import '../../css/MemberPage/Tab.css';
+import '../../css/Members/Tab.css';
 
 const Tab = (props) => {
 

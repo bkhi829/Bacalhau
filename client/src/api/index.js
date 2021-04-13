@@ -1,3 +1,3 @@
 import axios from 'axios';
 
-export const fetchAllMembers = () => axios.get("http://localhost:5000/bacalhauAPI/members");
+export const fetchAllMembers = () => axios.get(process.env.REACT_APP_API_URL+"/bacalhauAPI/members");

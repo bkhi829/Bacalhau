@@ -3,7 +3,7 @@ import { useState,useEffect, useRef } from 'react';
 import TabContainer from './TabContainer';
 import InfoContainer from './InfoContainer';
 import {fetchAllMembers} from '../../api/index';
-import '../../css/MemberPage/Member.css';
+import '../../css/Members/Member.css';
 
 
 const Members = () => {

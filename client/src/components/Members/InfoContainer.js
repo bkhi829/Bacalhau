@@ -2,7 +2,7 @@ import React from 'react';
 import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import '../../css/MemberPage/InfoContainer.css';
+import '../../css/Members/InfoContainer.css';
 
 const InfoContainer = (props,ref)=>{
   return (

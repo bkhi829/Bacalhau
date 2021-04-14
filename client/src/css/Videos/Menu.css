@@ -45,11 +45,13 @@ ul.videosMenu li.listItem {
   height: 100%;
   width: 33.3%;
   color: grey;
+  cursor: pointer;
 }
 
 ul.videosMenu li.listItem.active {
   font-weight: bold;
   color: #000;
+  cursor:text;
 }
 
 

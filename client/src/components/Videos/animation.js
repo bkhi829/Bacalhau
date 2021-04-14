@@ -11,9 +11,9 @@ export const btnAnimation = (ref,show)=> {
   const tl = gsap.timeline();
   if(show){
     tl.to(ref.current,{visibility:'visible',duration:0})
-    .to(ref.current,{opacity:1,duration:.5});
+    .to(ref.current,{opacity:1,cursor:'pointer',duration:.2});
   } else {
-    tl.to(ref.current,{opacity:0,duration:.5})
+    tl.to(ref.current,{opacity:0,cursor:'unset',duration:.2})
     .to(ref.current,{visibility:'hidden',duration:0},"<.5");
   }
 }

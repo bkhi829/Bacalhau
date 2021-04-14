@@ -2,10 +2,19 @@ div.VideosPage {
   padding-top: 10vh;
   width: 100%;
   min-height: 90vh;
+  box-sizing: border-box;
 }
 
 main.VideosMain {
   width: 70%;
   margin: auto;
   min-height: 90vh;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) {
+  main.VideosMain {
+    width: 100%;
+    padding: 0 12px;
+  }
 }

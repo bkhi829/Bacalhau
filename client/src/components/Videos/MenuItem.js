@@ -1,9 +1,8 @@
 const MenuItem = (props) => {
-
-  const handleClick = ()=>props.setActiveItem(props.listID);
-
   return (
-    <li className={`listItem ${props.activeItem===props.listID?"active":""}`} onClick={()=>{handleClick(props.listID)}}>{props.label}</li>
+    <li className={`listItem ${props.activePlaylist._id===props.ele._id?"active":""}`} onClick={()=>{props.handleListItemClick(props.ele)}}>
+      <span className="listName">{props.ele.name}</span>
+    </li>
   )
 }
 

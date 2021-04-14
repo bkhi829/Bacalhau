@@ -37,7 +37,7 @@
 }
 
 /* iPhone (most mobile) css */
-@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) {
   .descriptionContainer {
     min-height: 90vh;
     background: none;

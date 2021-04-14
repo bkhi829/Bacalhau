@@ -16,7 +16,7 @@ header a {
 }
 
 h2.title {
-  color: #00AC94;
+  color: var(--main-theme-color);
   font-size: 28px;
 }
 
@@ -33,7 +33,7 @@ header ul li{
 }
 
 header ul li:hover{
-  color: #00AC94;
+  color: var(--main-theme-color);
   cursor: pointer;
 }
 
@@ -46,7 +46,7 @@ header hr {
 }
 
 header ul a:hover~hr{
-  background-color: #00AC94;
+  background-color: var(--main-theme-color);
 }
 
 header ul a:hover:nth-child(2)~hr {

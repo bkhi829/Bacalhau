@@ -11,11 +11,9 @@ div.menuContainer {
   background: none;
   box-shadow: none;
   cursor: pointer;
-}
-
-.menuContainer button.btnLeft{
   visibility: hidden;
   opacity: 0;
+  color: var(--main-theme-color);
 }
 
 .menuContainer button:focus{
@@ -44,19 +42,30 @@ ul.videosMenu li.listItem {
   justify-content: center;
   height: 100%;
   width: 33.3%;
-  color: grey;
+}
+
+ul.videosMenu li.listItem span.listName {
   cursor: pointer;
+  color: #bbbbbb;
+  font-size: 1.5rem;
 }
 
-ul.videosMenu li.listItem.active {
+ul.videosMenu li.listItem.active span.listName {
+  cursor: text;
   font-weight: bold;
-  color: #000;
-  cursor:text;
+  color: var(--main-theme-color);
 }
 
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) {
   div.menuContainer {
-    width: 100%;
+    width: 90%;
+  }
+
+  ul.videosMenu li.listItem{
+    width: 50%;
+  }
+
+  ul.videosMenu li.listItem span.listName {
+    font-size: 1.2rem;
   }
 }

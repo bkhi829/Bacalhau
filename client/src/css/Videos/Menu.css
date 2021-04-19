@@ -36,7 +36,7 @@ ul.videosMenu::-webkit-scrollbar {
   display:none;
 }
 
-ul.videosMenu li.listItem {
+ul.videosMenu li.menuItem {
   display:inline-flex;
   align-items: center;
   justify-content: center;
@@ -44,13 +44,13 @@ ul.videosMenu li.listItem {
   width: 33.3%;
 }
 
-ul.videosMenu li.listItem span.listName {
+ul.videosMenu li.menuItem span.itemName {
   cursor: pointer;
   color: #bbbbbb;
   font-size: 1.5rem;
 }
 
-ul.videosMenu li.listItem.active span.listName {
+ul.videosMenu li.menuItem.active span.itemName {
   cursor: text;
   font-weight: bold;
   color: var(--main-theme-color);
@@ -61,11 +61,11 @@ ul.videosMenu li.listItem.active span.listName {
     width: 90%;
   }
 
-  ul.videosMenu li.listItem{
+  ul.videosMenu li.menuItem{
     width: 50%;
   }
 
-  ul.videosMenu li.listItem span.listName {
+  ul.videosMenu li.menuItem span.itemName {
     font-size: 1.2rem;
   }
 }

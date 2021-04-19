@@ -17,3 +17,21 @@ export const btnAnimation = (ref,show)=> {
     .to(ref.current,{visibility:'hidden',duration:0},"<.5");
   }
 }
+
+export const fadeOutAnimation = (ref) => {
+  return new Promise((resolve,reject) => {
+    resolve(gsap.fromTo(ref.current,{opacity: 1},{opacity: 0,duration:.3}));
+  });
+}
+
+export const fadeInAnimation = (ref) => {
+  return new Promise((resolve,reject) => {
+    resolve(gsap.fromTo(ref.current,{opacity: 0},{opacity: 1,duration:.3,delay:.2}));
+  });
+}
+
+export const goToAnimation = () => {
+  var obj = document.querySelector('.menuContainer');
+  var top = obj.offsetTop - window.innerHeight/10;
+  gsap.to(window,{scrollTo:{y:top}});
+}

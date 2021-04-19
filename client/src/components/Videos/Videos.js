@@ -1,5 +1,6 @@
 import { useState,useEffect } from 'react';
 import Menu from './Menu';
+import VideoContainer from './VideoContainer';
 import { fetchVideoTypes } from '../../api/index';
 
 import '../../css/Videos/Videos.css';
@@ -34,7 +35,7 @@ const Videos = ()=>{
     <div className="VideosPage">
       <main className="VideosMain">
         {!fetching?<Menu listItem={playlistItem} activePlaylist={activePlaylist} handleListItemClick={handleListItemClick}/>:""}
-        <p>{activePlaylist.name}</p>
+        {!fetching?<VideoContainer activePlaylist={activePlaylist} />:""}
       </main>
     </div>
   )

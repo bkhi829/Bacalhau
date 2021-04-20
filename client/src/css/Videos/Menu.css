@@ -56,7 +56,7 @@ ul.videosMenu li.menuItem.active span.itemName {
   color: var(--main-theme-color);
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 812px) {
+@media only screen and (min-width: 320px) and (max-width: 812px) {
   div.menuContainer {
     width: 90%;
   }

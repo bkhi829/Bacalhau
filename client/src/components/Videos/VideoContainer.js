@@ -43,7 +43,7 @@ const VideoContainer = ({activePlaylist})=>{
   },[activePlaylist]);
 
   useEffect(()=>{
-    const isMobile = window.matchMedia('only screen and (min-device-width: 320px) and (max-device-width: 812px)');
+    const isMobile = window.matchMedia('only screen and (min-width: 320px) and (max-width: 812px)');
     isMobile.addEventListener('change',handleMediaQueryChange);
 
     return ()=>{

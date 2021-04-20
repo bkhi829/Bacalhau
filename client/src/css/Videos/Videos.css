@@ -12,7 +12,7 @@ main.VideosMain {
   box-sizing: border-box;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 812px) {
+@media only screen and (min-width: 320px) and (max-width: 812px) {
   main.VideosMain {
     width: 100%;
     padding: 0 12px;

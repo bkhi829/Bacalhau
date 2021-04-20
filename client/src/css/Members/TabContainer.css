@@ -50,7 +50,7 @@ div.tabContent{
 }
 
 /* iPhone (most mobile) css */
-@media only screen and (min-device-width: 320px) and (max-device-width: 812px) {
+@media only screen and (min-width: 320px) and (max-width: 812px) {
   li.tabButton {
     width: 50%;
   }

@@ -8,6 +8,11 @@ header {
   position:fixed;
   z-index: 999;
   background-color: #fff;
+  padding: 4px 12px;
+}
+
+header .bgWrapper {
+  display: none;
 }
 
 header a {
@@ -15,19 +20,22 @@ header a {
   color: unset;
 }
 
-h2.title {
+a.mainTitle h2 {
   color: var(--main-theme-color);
   font-size: 28px;
 }
 
-header ul {
+header nav {
   align-self: flex-end;
+}
+
+header ul {
   margin: 0;
+  padding-inline-start: 0;
 }
 
 header ul li{
   display: inline-block;
-  position: relative;
   margin: 0 20px 10px 20px;
   font-size: 18px;
 }
@@ -37,18 +45,91 @@ header ul li:hover{
   cursor: pointer;
 }
 
-header hr {
-  margin: 0;
-  background-color: transparent;
-  height: 2px;
+header .navBtn {
+  background: none;
   border: none;
-  width: 50%;
+  box-shadow: none;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 0;
+  display: none;
 }
 
-header ul a:hover~hr{
-  background-color: var(--main-theme-color);
-}
+@media only screen and (min-width: 320px) and (max-width: 812px) {
 
-header ul a:hover:nth-child(2)~hr {
-  margin-left: 50%;
+  header .bgWrapper {
+    display: block;
+    position: absolute;
+    background-color:#fff;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  header a.mainTitle h2{
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 99;
+  }
+
+  header nav {
+    align-self: unset;
+  }
+
+  header ul {
+    display:none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 1px);
+    background-color: #fff;
+  }
+
+  .moveDown {
+    animation: menuShow 0.3s ease-in-out;
+  }
+
+  .moveUp {
+    animation: menuHide 0.3s ease-in-out;
+  }
+
+  @keyframes menuShow {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+  }
+
+  @keyframes menuHide {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-100px); }
+  }
+
+  header ul.shown {
+    display: block;
+  }
+
+  header ul li {
+    display: block;
+    text-align: center;
+    padding: 6px 12px;
+    margin: 8px 0;
+    position: relative;
+    font-size: 1.2rem;
+  }
+
+  header ul a:not(:last-child) li:after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: -4px;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  header .navBtn{
+    display: block;
+    position:relative;
+    z-index: 99;
+  }
 }

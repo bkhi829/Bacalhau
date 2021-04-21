@@ -7,9 +7,14 @@ const infoOutAnimation = ()=> {
     gsap.to('.InfoContainer',{opacity:0,display:'none',duration:0});
 }
 
-export const tabContainerAnimation = (ref) => {
+export const tabContainerInAnimation = (ref) => {
   infoOutAnimation();
-  gsap.fromTo(ref.current,{opacity:0},{opacity:1,duration:1})
+  return new Promise(resolve=>resolve(gsap.fromTo(ref.current,{opacity:0},{opacity:1,duration:.3})));
+}
+
+export const tabContainerOutAnimation = (ref) => {
+  infoOutAnimation();
+  return new Promise(resolve=>resolve(gsap.fromTo(ref.current,{opacity:1},{opacity:0,duration:.3})));
 }
 
 export const infoAnimation = (ref) => {

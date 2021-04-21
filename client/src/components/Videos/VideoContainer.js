@@ -12,7 +12,6 @@ const VideoContainer = ({activePlaylist})=>{
   const containerRef = useRef(null);
   const [activeVideo, setActiveVideo] = useState(null);
   const [nextPageToken,setNextPageToken] = useState(null);
-  // const [prevPageToken,setPrevPageToken] = useState(null);
   const [ytopts,setYtopts] = useState({
     width: '100%',
     height:'480px'
@@ -26,19 +25,30 @@ const VideoContainer = ({activePlaylist})=>{
     }
   }
 
-  useEffect(()=>{
-    fadeOutAnimation(containerRef).then(()=>{
-      fetchVideos(activePlaylist.playlistID).then((res)=>{
-        if('nextPageToken' in res.data){
-          setNextPageToken(res.data.nextPageToken);
-        }
-        setVideos(res.data.items);
+  const fetch = (pid,token)=>{
+    fetchVideos(pid,token).then((res)=>{
+      if('nextPageToken' in res.data){
+        setNextPageToken(res.data.nextPageToken);
+      } else {
+        setNextPageToken(null);
+      }
+      if(token===null){
         if(res.data.items.length > 0){
           const first_vid = res.data.items[0].snippet.resourceId.videoId;
+          setVideos(res.data.items);
           setActiveVideo(first_vid);
-          fadeInAnimation(containerRef);
         }
-      }).catch(err=>console.error(err));
+      } else {
+        setVideos(prev=>[...prev,...res.data.items])
+      }      
+    })
+    .catch(err=>console.error(err));
+  }
+
+  useEffect(()=>{
+    fadeOutAnimation(containerRef).then(()=>{
+      fetch(activePlaylist.playlistID,null);
+      fadeInAnimation(containerRef);
     })
   },[activePlaylist]);
 
@@ -52,6 +62,7 @@ const VideoContainer = ({activePlaylist})=>{
   });
   
   const list = videos.map((ele,ind)=><VideoItem key={ind} data={ele} setActiveVideo={setActiveVideo} />);
+  const nextBtn = nextPageToken !== null ?<button className="loadBtn" onClick={()=>{fetch(activePlaylist.playlistID,nextPageToken)}}>顯示更多...</button>:"";
 
 
   if(activePlaylist && Object.keys(activePlaylist).length===0 && activePlaylist.constructor===Object){
@@ -66,6 +77,7 @@ const VideoContainer = ({activePlaylist})=>{
       <div className="vlistContainer">
         {list}
       </div>
+      {nextBtn}
     </div>
   )
 }

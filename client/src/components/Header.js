@@ -10,18 +10,19 @@ const Header = () => {
   const [showNav,setShowNav] = useState(true);
   const navRef = useRef(null)
 
-  const handleClick = (show)=>{
+  const handleClick = async (show)=>{
     if(show){
-      navRef.current.classList.toggle('shown');
+      navRef.current.classList.add('shown');
       navRef.current.classList.add('moveDown');
       navRef.current.classList.remove('moveUp');
     } else {
       navRef.current.classList.remove('moveDown');
       navRef.current.classList.add('moveUp');
-      setTimeout(()=>{navRef.current.classList.toggle('shown')},300);
+      setTimeout(()=>navRef.current.classList.remove('shown'),200);
     }
     setShowNav(!show);
   }
+
 
   return (
     <header>

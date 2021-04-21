@@ -1,22 +1,21 @@
 import { useState, useRef } from 'react';
-import { tabContainerAnimation } from './animation';
+import { tabContainerInAnimation, tabContainerOutAnimation } from './animation';
 import Tab from './Tab';
 
 import '../../css/Members/TabContainer.css';
-import { useEffect } from 'react/cjs/react.development';
 
 const TabContainer = (props) =>{
   const [activeTab,setActiveTab] = useState(0);
   const tabRef = useRef();
 
   const buildTab = (el, setfn) => <Tab key={el._id} el={el} setCurr={setfn} infoRef={props.infoRef}/>
-  const handleClick = (id) => {
+  const handleClick = async (id) => {
     if(activeTab!==id){
+      await tabContainerOutAnimation(tabRef);
       setActiveTab(id);
+      tabContainerInAnimation(tabRef);
     }
   }
-
-  useEffect(()=>tabContainerAnimation(tabRef),[activeTab]);
 
   return(
     <div className="tabContainer">

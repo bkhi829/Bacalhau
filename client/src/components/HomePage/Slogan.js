@@ -1,6 +1,7 @@
 
 import {useEffect} from 'react';
 import {sloganAnimation} from './animation';
+import cover from '../../img/cover.jpg';
 
 import '../../css/HomePage/Slogan.css';
 
@@ -13,11 +14,12 @@ const Slogan = () => {
 
   return (
     <div className="sloganContainer">
-      <div className="slogan">
+      {/* <div className="slogan">
         <h1 ref={e=>sloganRef.push(e)}>Game</h1>
         <h1 ref={e=>sloganRef.push(e)}>Never</h1>
         <h1 ref={e=>sloganRef.push(e)}>Over！</h1>
-      </div>
+      </div> */}
+      <img src={cover} alt="cover" />
     </div>
   )
 }

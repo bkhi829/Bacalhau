@@ -22,18 +22,18 @@
 }
 
 .descriptionContainer main blockquote{
-  font-size: 2rem;
+  font-size: 2.3rem;
+  line-height: 2em;
   font-weight: bold;
   margin: 0;
   padding: 4px 12px;
 }
 
 .descriptionContainer main p {
-  line-height: 2rem;
   font-size: 1.3rem;
+  line-height: 2.3rem;
   margin: 0;
-  padding: 6px 18px;
-  font-weight: 500;
+  padding: 6px 36px;
 }
 
 /* iPhone (most mobile) css */

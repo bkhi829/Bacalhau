@@ -6,6 +6,7 @@ import '../../css/Members/InfoContainer.css';
 
 const InfoContainer = ({data},ref)=>{
 
+  const imgSource = ('icon_url' in data && data.icon_url!==null)? (data.icon_url.match(/http/)!==null?data.icon_url:`./assests/${data.icon_url}`): "";
   const fbIcon = ('facebook_url' in data && data.facebook_url.length>0)?<a href={data.facebook_url}><FontAwesomeIcon className="socialIcon" icon={faFacebook} size='2x' color='#4867AA'/></a>:"";
   const igIcon = ('instagram_url' in data &&data.instagram_url.length>0)?<a href={data.instagram_url}><FontAwesomeIcon className="socialIcon" icon={faInstagram} size='2x' color='#C13584'/></a>:"";
   const ytIcon = ('youtube_url' in data &&data.youtube_url.length>0)?<a href={data.youtube_url}><FontAwesomeIcon className="socialIcon" icon={faYoutube} size='2x' color='#FE0000'/></a>:"";
@@ -16,7 +17,7 @@ const InfoContainer = ({data},ref)=>{
   return (
     <div className="InfoContainer" ref={ref}>
       <div className="ImgContainer">
-        <img src={`./assests/${data.icon_url}.jpg`} alt=" "></img>
+        <img src={imgSource} alt=" "></img>
         <div className="SocialContainer">
           {fbIcon}
           {igIcon}

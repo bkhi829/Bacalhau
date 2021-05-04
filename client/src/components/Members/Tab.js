@@ -9,12 +9,14 @@ const Tab = (props) => {
     infoAnimation(props.infoRef);
   }
 
+  const source = props.el.icon_url.match(/http/)!==null?props.el.icon_url:`./assests/${props.el.icon_url}`;
+
   return (
     <div className="iconTab" onClick={handleClick}>
       <div className="icon">
         {
           props.el.icon_url!==undefined?
-          <img src={`./assests/${props.el.icon_url}.jpg`} alt=" "></img>:
+          <img src={source} alt=" "></img>:
           ""
         }
       </div>

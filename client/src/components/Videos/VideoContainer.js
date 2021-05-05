@@ -3,6 +3,7 @@ import { fetchVideos } from '../../api/index.js';
 import { fadeInAnimation, fadeOutAnimation } from './animation';
 import Youtube from 'react-youtube';
 import VideoItem from './VideoItem';
+import GotoTop from '../GotoTop';
 
 import '../../css/Videos/VideoContainer.css';
 
@@ -16,12 +17,22 @@ const VideoContainer = ({activePlaylist})=>{
     width: '100%',
     height:'480px'
   });
+  const [btnGotoTop, setBtnGotoTop] = useState(false);
 
   const handleMediaQueryChange = (e)=>{
     if(e.matches){
       setYtopts({...ytopts,height:'240px'})
     } else {
       setYtopts({...ytopts,height:'480px'})
+    }
+  }
+
+  const handleScroll = ()=>{
+    const isMobile = window.matchMedia('only screen and (min-width: 320px) and (max-width: 812px)');
+    if(isMobile && window.pageYOffset>150){
+      setBtnGotoTop(true);
+    } else {
+      setBtnGotoTop(false);
     }
   }
 
@@ -60,6 +71,12 @@ const VideoContainer = ({activePlaylist})=>{
       isMobile.removeEventListener('change',handleMediaQueryChange);
     }
   });
+
+  useEffect(()=>{
+    window.addEventListener('scroll',handleScroll);
+
+    return ()=>window.removeEventListener('scroll',handleScroll);
+  },[])
   
   const list = videos.map((ele,ind)=><VideoItem key={ind} data={ele} setActiveVideo={setActiveVideo} />);
   const nextBtn = nextPageToken !== null ?<button className="loadBtn" onClick={()=>{fetch(activePlaylist.playlistID,nextPageToken)}}>顯示更多...</button>:"";
@@ -78,6 +95,7 @@ const VideoContainer = ({activePlaylist})=>{
         {list}
       </div>
       {nextBtn}
+      <GotoTop show={btnGotoTop}/>
     </div>
   )
 }

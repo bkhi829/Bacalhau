@@ -48,6 +48,7 @@
 @media only screen and (min-width: 320px) and (max-width: 812px) {
   .likeCountContainer{
     background-attachment: unset;
+    min-height: 90vh;
   }
 
   .likeCountContainer .likeCountWrap {
@@ -60,5 +61,19 @@
   .likeCountSection {
     margin: 0;
     justify-content: space-evenly;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 812px) and (orientation:landscape) {
+  .likeCountContainer {
+    height: auto;
+  }
+
+  .likeCountContainer .likeCountWrap {
+    width: 70%;
+  }
+
+  .likeCountSection {
+    margin: 2rem;
   }
 }

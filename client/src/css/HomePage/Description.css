@@ -1,6 +1,7 @@
 .descriptionContainer {
   height: 90vh;
-  background: linear-gradient(0.25turn, #bff5ee,#fff,#fff, #bff5ee);
+  background-color: #fff;
+  /* background: linear-gradient(0.25turn, #bff5ee,#fff,#fff, #bff5ee); */
 }
 
 .descriptionContainer main {
@@ -43,8 +44,17 @@
     background: none;
   }
 
+  .descriptionContainer main div.overlay {
+    justify-content: space-evenly;
+  }
+
+  .descriptionContainer main blockquote {
+    font-size: 1.7rem;
+  }
+
   .descriptionContainer main {
     background-position: center;
+    background-size: contain;
     width: 100%;
     padding: 10px;
   }

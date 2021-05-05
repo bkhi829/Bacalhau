@@ -1,0 +1,22 @@
+button.btnGotoTop {
+  background: none;
+  box-shadow: none;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid;
+  width: 50px;
+  height: 30px;
+  position: sticky;
+  position: -webkit-sticky;
+  left:100%;
+  bottom: 10%;
+  color: var(--main-theme-color);
+}
+
+button.btnGotoTop.show {
+  display:block;
+}
+
+button.btnGotoTop.hide {
+  display:none;
+}

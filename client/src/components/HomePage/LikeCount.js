@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { likeCountAnimation } from './animation';
 
 import '../../css/HomePage/LikeCount.css';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 
 const LikeCount = () => {
 
   let likeCountRef = [];
   useEffect(()=>{
     likeCountAnimation(likeCountRef);
-  });
+  },[]);
 
   return (
     <div className="likeCountContainer">

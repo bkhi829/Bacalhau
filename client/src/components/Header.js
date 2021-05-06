@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header>
       <div className="bgWrapper"></div>
-      <Link to='/' className="mainTitle" onClick={()=>{handleClick(false)}}><h2>馬介休 Bacalhau</h2></Link>
+      <Link to='/' className="mainTitle" onClick={()=>{handleClick(false)}}><h2>歡樂馬介休 Bacalhau</h2></Link>
       <nav>
         <ul className="navMenu" ref={navRef}>
           <Link to='/members' onClick={()=>{handleClick(false)}}><li>成員介紹</li></Link>

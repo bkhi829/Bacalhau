@@ -45,8 +45,9 @@ const VideoContainer = ({activePlaylist})=>{
       }
       if(token===null){
         if(res.data.items.length > 0){
-          const first_vid = res.data.items[0].snippet.resourceId.videoId;
-          setVideos(res.data.items);
+          const public_videos = res.data.items.filter((ele)=>ele.status.privacyStatus !== 'private');
+          const first_vid = public_videos[0].snippet.resourceId.videoId;
+          setVideos(public_videos);
           setActiveVideo(first_vid);
         }
       } else {
